@@ -22,10 +22,6 @@ class HomeFragment : Fragment() {
     lateinit var txtCsTacDung: TextView
     lateinit var txtCsPhanKhang: TextView
 
-    lateinit var  dbRef: DatabaseReference
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,84 +34,38 @@ class HomeFragment : Fragment() {
         txtCsTacDung = view.findViewById(R.id.cs_tacdung)
         txtCsPhanKhang = view.findViewById(R.id.cs_phankhang)
 
+        showData()
+        return view
+    }
+
+    private fun showData(){
         val rootRef = FirebaseDatabase.getInstance().reference
-        val newsRef = rootRef.child("test")
+        val testRef = rootRef.child("test").orderByChild("TIME").limitToLast(1)
         val valueEventListener: ValueEventListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (ds in dataSnapshot.children) {
-                    val desc = ds.child("CosFi").getValue(String::class.java)
-                    val title = ds.child("TIME").getValue(String::class.java)
-                    Log.d("abc", "$desc / $title")
+                    val time = ds.child("TIME").getValue(String::class.java)
+                    val dienAp = ds.child("Three-phase Equivalent Voltage").getValue(String::class.java)
+                    val dongDien = ds.child("Three-phase Equivalent Current").getValue(String::class.java)
+                    val tanSo = ds.child("Frequency").getValue(String::class.java)
+                    val csTacDung = ds.child("ActivePowe").getValue(String::class.java)
+                    val csPhanKhang = ds.child("ReactivePower").getValue(String::class.java)
+
+                    // Set data
+                    txtTime.text = time
+                    txtDienAp.text = dienAp
+                    txtDongDien.text = dongDien
+                    txtTanSo.text = tanSo
+                    txtCsTacDung.text = csTacDung
+                    txtCsPhanKhang.text = csPhanKhang
                 }
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
-                Log.d("abc", databaseError.message)
+                Log.d("error", databaseError.message)
             }
         }
-        newsRef.addValueEventListener(valueEventListener)
-
-//        showData()
-//        println("alo12345")
-
-//        val reference = FirebaseDatabase.getInstance().getReference("test").child("-NKgivs6DhsL5T6IQsYV").child("TIME")
-
-//        reference.addValueEventListener(object : ValueEventListener {
-//            override fun onCancelled(error: DatabaseError) {
-//                Log.e("Response", error.message)
-//
-//            }
-//
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//                for (ds in snapshot.children) {
-//                    txtTime.text = ds.toString();
-//                    Log.d("Response", ds.toString())
-//                }
-//            }
-//        })
-        return view
-    }
-
-    fun showData(){
-        println("database")
-
-
-
-
-
-
-
-//        dbRef = FirebaseDatabase.getInstance().getReference("test")
-//
-////        val capList = dbRef.orderByChild("TIME").limitToLast(1);
-//        val capList = dbRef.limitToLast(1);
-//
-//        capList.addValueEventListener(object : ValueEventListener{
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//                Log.d("snapshot", snapshot.toString())
-//                if(snapshot.exists()){
-//
-//                }
-//                for (capSnapshot in snapshot.children){
-//                    Log.d("dbRef", capSnapshot.child("TIME").getValue().toString())
-//                    val timeDb : String = capSnapshot.child("TIME").getValue().toString();
-//                    txtTime.text = timeDb;
-//                    print("alo" + txtTime);
-//                }
-////
-////                val test : String =
-////                    CharCategory.valueOf(snapshot.child("3").child("CAPACITOR").child("TIME").getValue()
-////                        .toString())
-////                        .toString();
-//                txtTime.text = "abc"
-//            }
-//
-//            override fun onCancelled(error: DatabaseError) {
-//
-//            }
-//        })
-////        txtTime.text = "abc"
-//        println("sao khong chay")
+        testRef.addValueEventListener(valueEventListener)
     }
 
     companion object {
