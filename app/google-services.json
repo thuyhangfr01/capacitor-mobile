@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1098068558082",
+    "firebase_url": "https://capacitor-129e8-default-rtdb.firebaseio.com",
+    "project_id": "capacitor-129e8",
+    "storage_bucket": "capacitor-129e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098068558082:android:79412b92a28f2cdba5421b",
+        "android_client_info": {
+          "package_name": "com.codingwithme.meowbottomnavigationbar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098068558082-3895ge8v8tn5kfltet7rkbvhr7vtfgv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCegaC1IR3oz0oDul3ZnaSuebB4iG8XBiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1098068558082-3895ge8v8tn5kfltet7rkbvhr7vtfgv1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1098068558082-7b8325bcv33deibfrdacmeantnsuepm1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "quanlytubu"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
