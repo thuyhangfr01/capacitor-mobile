@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="false"
+    android:background="@drawable/bg_home">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg_home">
+    >
 
 
     <RelativeLayout
@@ -123,9 +128,10 @@
     <RelativeLayout
         android:id="@+id/detail"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="top"
         android:layout_marginTop="30sp"
+        android:paddingBottom="15sp"
         android:layout_marginLeft="30sp"
         android:layout_marginRight="30sp"
         android:background="@drawable/draw_bg_card">
@@ -320,8 +326,9 @@
     <RelativeLayout
         android:id="@+id/contactor"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="top"
+        android:paddingBottom="15sp"
         android:layout_marginTop="15sp"
         android:layout_marginLeft="30sp"
         android:layout_marginRight="30sp"
@@ -336,7 +343,7 @@
                 android:layout_width="20sp"
                 android:layout_height="20sp"
                 android:src="@drawable/ic_dongdien"
-                android:layout_marginLeft="25sp">
+                android:layout_marginLeft="15sp">
             </ImageView>
             <TextView
                 android:layout_width="match_parent"
@@ -345,7 +352,7 @@
                 android:fontFamily="@font/mont_bold"
                 android:textColor="#5E8CD1"
                 android:layout_alignParentRight="true"
-                android:layout_marginLeft="55sp"></TextView>
+                android:layout_marginLeft="45sp"></TextView>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/status1"
@@ -406,12 +413,12 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/item2"
                 android:layout_marginLeft="100px">
+
                 <ImageView
                     android:id="@+id/ic_status3"
                     android:layout_width="18sp"
                     android:layout_height="35sp"
-                    android:src="@drawable/ic_status_green">
-                </ImageView>
+                    android:src="@drawable/ic_status_green"></ImageView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -453,9 +460,10 @@
     <RelativeLayout
         android:id="@+id/contactor1"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="top"
         android:layout_marginTop="20sp"
+        android:paddingBottom="15sp"
         android:layout_marginLeft="30sp"
         android:layout_marginRight="30sp"
         android:background="@drawable/draw_bg_card">
@@ -469,7 +477,7 @@
                 android:layout_width="20sp"
                 android:layout_height="20sp"
                 android:src="@drawable/ic_dongdien"
-                android:layout_marginLeft="55sp">
+                android:layout_marginLeft="45sp">
             </ImageView>
             <TextView
                 android:layout_width="match_parent"
@@ -478,7 +486,7 @@
                 android:fontFamily="@font/mont_bold"
                 android:textColor="#5E8CD1"
                 android:layout_alignParentRight="true"
-                android:layout_marginLeft="85sp"></TextView>
+                android:layout_marginLeft="75sp"></TextView>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/status2"
@@ -584,3 +592,4 @@
         </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>
+</ScrollView>
