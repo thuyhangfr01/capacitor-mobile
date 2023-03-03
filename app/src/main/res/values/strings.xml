@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">Capacitor App</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtTenTuBu">Capacitor:</string>
+    <string name="txtViTri">Installation position:</string>
+    <string name="txtViTriChiTiet">Pillar 5H</string>
+    <string name="txtThoiGianLayMau">Sampling Cycle:</string>
+    <string name="txtDienAp">Voltage</string>
+    <string name="txtDongDien">Current</string>
+    <string name="txtTanSo">Frequency</string>
+    <string name="txtCongSuatTacDung">Active Power</string>
+    <string name="txtCongSuatPhanKhang">Reactive Power</string>
+    <string name="txtHeSoCongSuat">Power Factor</string>
+    <string name="txtTrangThaiContactor">Capacitor contactor status</string>
+    <string name="txtTinHieuDongCat">Contactor control signal from Relay</string>
+    <string name="txtTrangThaiContactorHienTai">Realtime status contactor</string>
 </resources>

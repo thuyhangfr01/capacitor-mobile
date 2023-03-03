@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fillViewport="false"
     android:background="@drawable/bg_home">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    android:id="@+id/fragment_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -29,7 +30,7 @@
             android:layout_marginLeft="30sp">
         </ImageView>
         <ImageView
-            android:id="@+id/ava_user"
+            android:id="@+id/btn_language_en"
             android:layout_width="50sp"
             android:layout_height="50sp"
             android:src="@drawable/img_ava"
@@ -48,15 +49,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15sp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tụ bù hạ áp:"
-                android:textColor="#ffffff"
-                android:textSize="14sp"
+                android:layout_marginLeft="30sp"
                 android:fontFamily="@font/mont_mdium"
-                android:layout_marginLeft="30sp">
-            </TextView>
+                android:text="@string/txtTenTuBu"
+                android:textColor="#ffffff"
+                android:textSize="16sp"></TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -75,26 +76,26 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/name"
             android:layout_marginTop="15sp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vị trí lắp đặt:"
-                android:textColor="#ffffff"
-                android:textSize="14sp"
+                android:layout_marginLeft="30sp"
                 android:fontFamily="@font/mont_mdium"
-                android:layout_marginLeft="30sp">
-            </TextView>
+                android:text="@string/txtViTri"
+                android:textColor="#ffffff"
+                android:textSize="16sp"></TextView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Trụ 5H"
-                android:textColor="#ffffff"
-                android:textSize="14sp"
-                android:fontFamily="@font/mont_mdium"
-                android:layout_marginLeft="20sp"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="30sp">
-            </TextView>
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="30sp"
+                android:fontFamily="@font/mont_mdium"
+                android:text="@string/txtViTriChiTiet"
+                android:textColor="#ffffff"
+                android:textSize="16sp"></TextView>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/time"
@@ -102,22 +103,22 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/place"
             android:layout_marginTop="15sp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Thời gian lấy mẫu:"
-                android:textColor="#ffffff"
-                android:textSize="14sp"
+                android:layout_marginLeft="30sp"
                 android:fontFamily="@font/mont_mdium"
-                android:layout_marginLeft="30sp">
-            </TextView>
+                android:text="@string/txtThoiGianLayMau"
+                android:textColor="#ffffff"
+                android:textSize="16sp"></TextView>
             <TextView
                 android:id="@+id/txt_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
                 android:textColor="#ffffff"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/mont_mdium"
                 android:layout_marginLeft="20sp"
                 android:layout_alignParentRight="true"
@@ -140,24 +141,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15sp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Điện áp"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:layout_marginLeft="20sp"
                 android:fontFamily="@font/mont_bold"
-                android:layout_marginLeft="30sp">
-            </TextView>
+                android:text="@string/txtDienAp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"></TextView>
             <TextView
                 android:id="@+id/dien_ap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/mont_mdium"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="70sp">
+                android:layout_marginRight="80sp">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
@@ -165,7 +166,7 @@
                 android:text="V"
                 android:layout_alignParentRight="true"
                 android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/mont_mdium"
                 android:layout_marginRight="30sp">
             </TextView>
@@ -176,24 +177,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15sp"
             android:layout_below="@+id/layout_dienap">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dòng điện"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:layout_marginLeft="20sp"
                 android:fontFamily="@font/mont_bold"
-                android:layout_marginLeft="30sp">
-            </TextView>
+                android:text="@string/txtDongDien"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"></TextView>
             <TextView
                 android:id="@+id/dong_dien"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/mont_mdium"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="70sp">
+                android:layout_marginRight="80sp">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
@@ -201,7 +202,7 @@
                 android:text="A"
                 android:layout_alignParentRight="true"
                 android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/mont_mdium"
                 android:layout_marginRight="30sp">
             </TextView>
@@ -212,24 +213,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15sp"
             android:layout_below="@+id/layout_dongdien">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tần số"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:layout_marginLeft="20sp"
                 android:fontFamily="@font/mont_bold"
-                android:layout_marginLeft="30sp">
-            </TextView>
+                android:text="@string/txtTanSo"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"></TextView>
             <TextView
                 android:id="@+id/tan_so"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/mont_mdium"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="70sp">
+                android:layout_marginRight="80sp">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
@@ -237,7 +238,7 @@
                 android:text="Hz"
                 android:layout_alignParentRight="true"
                 android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/mont_mdium"
                 android:layout_marginRight="30sp">
             </TextView>
@@ -248,32 +249,32 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15sp"
             android:layout_below="@+id/layout_tanso">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Công suất tác dụng"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:layout_marginLeft="20sp"
                 android:fontFamily="@font/mont_bold"
-                android:layout_marginLeft="30sp">
-            </TextView>
+                android:text="@string/txtCongSuatTacDung"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"></TextView>
             <TextView
                 android:id="@+id/cs_tacdung"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#39A33D"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/mont_mdium"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="70sp">
+                android:layout_marginRight="80sp">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="W"
+                android:text="kW"
                 android:layout_alignParentRight="true"
                 android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/mont_mdium"
                 android:layout_marginRight="30sp">
             </TextView>
@@ -284,45 +285,83 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15sp"
             android:layout_below="@+id/layout_congsuattacdung">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Công suất phản kháng"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:layout_marginLeft="20sp"
                 android:fontFamily="@font/mont_bold"
-                android:layout_marginLeft="30sp">
-            </TextView>
+                android:text="@string/txtCongSuatPhanKhang"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"></TextView>
             <TextView
                 android:id="@+id/cs_phankhang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#C83025"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/mont_mdium"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="70sp">
+                android:layout_marginRight="80sp">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VAr"
+                android:text="kVAr"
                 android:layout_alignParentRight="true"
                 android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
+                android:textSize="16sp"
+                android:fontFamily="@font/mont_mdium"
+                android:layout_marginRight="30sp">
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_hesocongsuat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_below="@+id/layout_congsuarphankhang">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:fontFamily="@font/mont_bold"
+                android:text="@string/txtHeSoCongSuat"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"></TextView>
+            <TextView
+                android:id="@+id/hs_congsuat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#C83025"
+                android:textSize="16sp"
+                android:fontFamily="@font/mont_mdium"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="80sp">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
                 android:fontFamily="@font/mont_mdium"
                 android:layout_marginRight="30sp">
             </TextView>
         </RelativeLayout>
     </RelativeLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30sp"
         android:layout_marginTop="20sp"
-        android:text="Trạng thái contactor tụ bù"
         android:fontFamily="@font/mont_bold"
+        android:text="@string/txtTrangThaiContactor"
         android:textColor="#092251"
-        android:layout_marginLeft="30sp"></TextView>
+        android:textSize="16sp"></TextView>
     <RelativeLayout
         android:id="@+id/contactor"
         android:layout_width="match_parent"
@@ -343,16 +382,18 @@
                 android:layout_width="20sp"
                 android:layout_height="20sp"
                 android:src="@drawable/ic_dongdien"
-                android:layout_marginLeft="15sp">
+                android:layout_marginLeft="10sp">
             </ImageView>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tín hiệu đóng cắt contactor của Role"
-                android:fontFamily="@font/mont_bold"
-                android:textColor="#5E8CD1"
                 android:layout_alignParentRight="true"
-                android:layout_marginLeft="45sp"></TextView>
+                android:layout_marginLeft="35sp"
+                android:fontFamily="@font/mont_bold"
+                android:text="@string/txtTinHieuDongCat"
+                android:textColor="#5E8CD1"
+                android:textSize="16sp"></TextView>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/status1"
@@ -367,8 +408,8 @@
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/ic_status1"
-                    android:layout_width="18sp"
-                    android:layout_height="35sp"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
                     android:src="@drawable/ic_status_green">
                 </ImageView>
                 <TextView
@@ -377,7 +418,7 @@
                     android:text="1"
                     android:layout_below="@id/ic_status1"
                     android:fontFamily="@font/mont_bold"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textColor="#092251"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="5sp">
@@ -391,8 +432,8 @@
                 android:layout_marginLeft="100px">
                 <ImageView
                     android:id="@+id/ic_status2"
-                    android:layout_width="18sp"
-                    android:layout_height="35sp"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
                     android:src="@drawable/ic_status_green">
                 </ImageView>
                 <TextView
@@ -401,7 +442,7 @@
                     android:text="2"
                     android:layout_below="@id/ic_status2"
                     android:fontFamily="@font/mont_bold"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textColor="#092251"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="5sp">
@@ -416,8 +457,8 @@
 
                 <ImageView
                     android:id="@+id/ic_status3"
-                    android:layout_width="18sp"
-                    android:layout_height="35sp"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
                     android:src="@drawable/ic_status_green"></ImageView>
                 <TextView
                     android:layout_width="wrap_content"
@@ -425,7 +466,7 @@
                     android:text="3"
                     android:layout_below="@id/ic_status3"
                     android:fontFamily="@font/mont_bold"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textColor="#092251"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="5sp">
@@ -439,8 +480,8 @@
                 android:layout_marginLeft="100px">
                 <ImageView
                     android:id="@+id/ic_status4"
-                    android:layout_width="18sp"
-                    android:layout_height="35sp"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
                     android:src="@drawable/ic_status_green">
                 </ImageView>
                 <TextView
@@ -449,7 +490,7 @@
                     android:text="4"
                     android:layout_below="@id/ic_status4"
                     android:fontFamily="@font/mont_bold"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textColor="#092251"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="5sp">
@@ -479,14 +520,16 @@
                 android:src="@drawable/ic_dongdien"
                 android:layout_marginLeft="45sp">
             </ImageView>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Trạng thái contactor hiện tại"
-                android:fontFamily="@font/mont_bold"
-                android:textColor="#5E8CD1"
                 android:layout_alignParentRight="true"
-                android:layout_marginLeft="75sp"></TextView>
+                android:layout_marginLeft="75sp"
+                android:fontFamily="@font/mont_bold"
+                android:text="@string/txtTrangThaiContactorHienTai"
+                android:textColor="#5E8CD1"
+                android:textSize="16sp"></TextView>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/status2"
@@ -501,8 +544,8 @@
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/ic_status5"
-                    android:layout_width="18sp"
-                    android:layout_height="35sp"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
                     android:src="@drawable/ic_status_red">
                 </ImageView>
                 <TextView
@@ -511,7 +554,7 @@
                     android:text="1"
                     android:layout_below="@id/ic_status5"
                     android:fontFamily="@font/mont_bold"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textColor="#092251"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="5sp">
@@ -525,8 +568,8 @@
                 android:layout_marginLeft="100px">
                 <ImageView
                     android:id="@+id/ic_status6"
-                    android:layout_width="18sp"
-                    android:layout_height="35sp"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
                     android:src="@drawable/ic_status_red">
                 </ImageView>
                 <TextView
@@ -535,7 +578,7 @@
                     android:text="2"
                     android:layout_below="@id/ic_status6"
                     android:fontFamily="@font/mont_bold"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textColor="#092251"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="5sp">
@@ -549,8 +592,8 @@
                 android:layout_marginLeft="100px">
                 <ImageView
                     android:id="@+id/ic_status7"
-                    android:layout_width="18sp"
-                    android:layout_height="35sp"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
                     android:src="@drawable/ic_status_red">
                 </ImageView>
                 <TextView
@@ -559,7 +602,7 @@
                     android:text="3"
                     android:layout_below="@id/ic_status7"
                     android:fontFamily="@font/mont_bold"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textColor="#092251"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="5sp">
@@ -573,8 +616,8 @@
                 android:layout_marginLeft="100px">
                 <ImageView
                     android:id="@+id/ic_status8"
-                    android:layout_width="18sp"
-                    android:layout_height="35sp"
+                    android:layout_width="20sp"
+                    android:layout_height="40sp"
                     android:src="@drawable/ic_status_red">
                 </ImageView>
                 <TextView
@@ -583,7 +626,7 @@
                     android:text="4"
                     android:layout_below="@id/ic_status8"
                     android:fontFamily="@font/mont_bold"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textColor="#092251"
                     android:layout_centerInParent="true"
                     android:layout_marginTop="5sp">

@@ -1,7 +1,7 @@
 package com.codingwithme.meowbottomnavigationbar.fragments
 
-import android.app.NotificationChannel
-import android.app.NotificationManager
+import android.annotation.SuppressLint
+import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -10,17 +10,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.codingwithme.meowbottomnavigationbar.R
-import com.codingwithme.meowbottomnavigationbar.activities.MainActivity
 import com.google.firebase.database.*
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
-import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -31,6 +24,7 @@ class HomeFragment : Fragment() {
     lateinit var txtTanSo: TextView
     lateinit var txtCsTacDung: TextView
     lateinit var txtCsPhanKhang: TextView
+    lateinit var txtHeSoCongSuat: TextView
     lateinit var imgStatus1: ImageView
     lateinit var imgStatus2: ImageView
     lateinit var imgStatus3: ImageView
@@ -40,6 +34,7 @@ class HomeFragment : Fragment() {
     lateinit var imgStatus7: ImageView
     lateinit var imgStatus8: ImageView
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -51,6 +46,7 @@ class HomeFragment : Fragment() {
         txtTanSo = view.findViewById(R.id.tan_so)
         txtCsTacDung = view.findViewById(R.id.cs_tacdung)
         txtCsPhanKhang = view.findViewById(R.id.cs_phankhang)
+        txtHeSoCongSuat = view.findViewById(R.id.hs_congsuat)
         imgStatus1 = view.findViewById(R.id.ic_status1)
         imgStatus2 = view.findViewById(R.id.ic_status2)
         imgStatus3 = view.findViewById(R.id.ic_status3)
@@ -61,12 +57,13 @@ class HomeFragment : Fragment() {
         imgStatus8 = view.findViewById(R.id.ic_status8)
 
         showData()
+
         return view
     }
 
     private fun showData(){
         val rootRef = FirebaseDatabase.getInstance().reference
-        val testRef = rootRef.child("test").orderByChild("1234").limitToLast(1)
+        val testRef = rootRef.child("euphoria").orderByChild("TIME").limitToLast(1)
         val valueEventListener: ValueEventListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (ds in dataSnapshot.children) {
@@ -76,6 +73,7 @@ class HomeFragment : Fragment() {
                     val tanSo = ds.child("Frequency").getValue(String::class.java)
                     val csTacDung = ds.child("ActivePowe").getValue(String::class.java)
                     val csPhanKhang = ds.child("ReactivePower").getValue(String::class.java)
+                    val hsCongSuat = ds.child("cosFi").getValue(String::class.java)
                     val stt1 = ds.child("Coil 1").getValue(String::class.java)
                     val stt2 = ds.child("Coil 2").getValue(String::class.java)
                     val stt3 = ds.child("Coil 3").getValue(String::class.java)
@@ -92,6 +90,7 @@ class HomeFragment : Fragment() {
                     txtTanSo.text = tanSo
                     txtCsTacDung.text = csTacDung
                     txtCsPhanKhang.text = csPhanKhang
+                    txtHeSoCongSuat.text = hsCongSuat
                     if(stt1 == "0"){
                         imgStatus1.setImageResource(R.drawable.ic_status_green)
                     }

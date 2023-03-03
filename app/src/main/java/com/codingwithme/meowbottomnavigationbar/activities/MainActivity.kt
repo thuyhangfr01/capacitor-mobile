@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.codingwithme.meowbottomnavigationbar.R
 import com.codingwithme.meowbottomnavigationbar.fragments.HomeFragment
 import com.codingwithme.meowbottomnavigationbar.fragments.NotificationFragment
@@ -152,4 +153,6 @@ class MainActivity : AppCompatActivity() {
         }
         testRef.addValueEventListener(valueEventListener)
     }
+
+
 }
