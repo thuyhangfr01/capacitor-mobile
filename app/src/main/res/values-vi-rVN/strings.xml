@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txtTenTuBu">Tụ bù hạ áp:</string>
+    <string name="txtViTri">Vị trí lắp đặt:</string>
+    <string name="txtViTriChiTiet">Trụ 5H</string>
+    <string name="txtThoiGianLayMau">Thời gian lấy mẫu:</string>
+    <string name="txtDienAp">Điện áp</string>
+    <string name="txtDongDien">Dòng điện</string>
+    <string name="txtTanSo">Tần số</string>
+    <string name="txtCongSuatTacDung">Công suất tác dụng</string>
+    <string name="txtCongSuatPhanKhang">Công suất phản kháng</string>
+    <string name="txtHeSoCongSuat">Hệ số công suất</string>
+    <string name="txtTrangThaiContactor">Trạng thái contactor tụ bù</string>
+    <string name="txtTinHieuDongCat">Tín hiệu đóng cắt contactor của Role</string>
+    <string name="txtTrangThaiContactorHienTai">Trạng thái contactor hiện tại</string>
+</resources>
