@@ -127,7 +127,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun displayData(){
         val rootRef = FirebaseDatabase.getInstance().reference
-        val testRef = rootRef.child("test").orderByChild("TIME").limitToLast(1)
+        val testRef = rootRef.child("euphoria").orderByChild("TIME").limitToLast(1)
         val valueEventListener: ValueEventListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (ds in dataSnapshot.children) {

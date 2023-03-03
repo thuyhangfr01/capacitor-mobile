@@ -334,21 +334,12 @@
                 android:id="@+id/hs_congsuat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#C83025"
+                android:textColor="@color/colorPrimary"
                 android:textSize="16sp"
+                android:text="10.00"
                 android:fontFamily="@font/mont_mdium"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="80sp">
-            </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:layout_alignParentRight="true"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:fontFamily="@font/mont_mdium"
-                android:layout_marginRight="30sp">
             </TextView>
         </RelativeLayout>
     </RelativeLayout>

@@ -73,7 +73,7 @@ class HomeFragment : Fragment() {
                     val tanSo = ds.child("Frequency").getValue(String::class.java)
                     val csTacDung = ds.child("ActivePowe").getValue(String::class.java)
                     val csPhanKhang = ds.child("ReactivePower").getValue(String::class.java)
-                    val hsCongSuat = ds.child("cosFi").getValue(String::class.java)
+                    val hsCongSuat = ds.child("CosFi").getValue(String::class.java)
                     val stt1 = ds.child("Coil 1").getValue(String::class.java)
                     val stt2 = ds.child("Coil 2").getValue(String::class.java)
                     val stt3 = ds.child("Coil 3").getValue(String::class.java)
