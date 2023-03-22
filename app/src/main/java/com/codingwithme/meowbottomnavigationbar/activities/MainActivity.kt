@@ -99,8 +99,8 @@ class MainActivity : AppCompatActivity() {
 
         val notificationBuilder = NotificationCompat.Builder(this, "$CHANNEL_ID")
         notificationBuilder.setSmallIcon(R.drawable.ic_notification)
-        notificationBuilder.setContentTitle("Có sự cố xảy ra")
-        notificationBuilder.setContentText("Phát hiện sự cố đóng cắt của tụ bù. Kiểm tra ngay!")
+        notificationBuilder.setContentTitle("Warning")
+        notificationBuilder.setContentText("Switching failure detected! System needs maintenance!")
         notificationBuilder.priority = NotificationCompat.PRIORITY_HIGH
         notificationBuilder.setAutoCancel(true)
         notificationBuilder.setContentIntent(mainPendingIntent)
